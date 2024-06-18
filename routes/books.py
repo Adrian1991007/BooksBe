@@ -18,18 +18,18 @@ logger = logging.getLogger(__name__)
 
 # Initialize S3 client
 s3 = boto3.client('s3',
-                  aws_access_key_id='AKIAQ3EGVHPVTHSEBC3X',
-                  aws_secret_access_key='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',
-                  region_name='us-east-1')
+                  aws_access_key_id='',
+                  aws_secret_access_key='',
+                  region_name='')
 
 # Initialize SNS client
 sns = boto3.client('sns',
-                   aws_access_key_id='AKIAQ3EGVHPVTHSEBC3X',
-                   aws_secret_access_key='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',
-                   region_name='us-east-1')
+                   aws_access_key_id='',
+                   aws_secret_access_key='',
+                   region_name='')
 
 # Define the SNS topic ARN
-SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:471112624961:books'
+SNS_TOPIC_ARN = ''
 
 @timed
 @books_bp.route("", methods=["GET"])
